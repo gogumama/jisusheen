@@ -25,9 +25,9 @@
 			font-style: normal;
 			font-size: 2em;
 		}
-		img {
+		.book {
 			width: 500px;
-			margin-right: 50px;
+			margin-right: 30px;
 			margin-bottom: 50px;
 		}
 		#description {
@@ -38,32 +38,116 @@
 			padding-right: 30px;
 			margin-top: 10px;
 		}
-		div {
+		.items {
 			display:inline-block;
 			vertical-align: top;
+		}
+		.bigbox {
+			margin: 50px;
+			text-align: center;
+			top: 0%;
+			left: 0%;
+			position:fixed;
+			z-index: 5;
+		}
+		.buttonImage {
+			animation: spin 20s linear forwards infinite;
+			z-index: 3;
+		}
+		@keyframes spin {
+			0% {}
+			100% {
+				transform: rotateZ(360deg);
+			}
+		}
+		/* Container needed to position the button. Adjust the width as needed */
+		.container {
+		  position: relative;
+		  width: 100px;
+
+		}
+
+		/* Make the image responsive */
+		.container img {
+		  width: 100%;
+		  height: auto;
+		}
+
+		/* Style the button and place it in the middle of the container/image */
+		.container .btn {
+		  position: absolute;
+		  top: 30%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  background-color: #FFFFFF00;
+		  color: #CFFF04;
+		  font-size: 40px;
+		  padding: 12px 24px;
+		  border: none;
+		  cursor: pointer;
+		  border-radius: 5px;
+		  font-family: 'helvetica', sans-serif;
+		  font-weight: 700;
+		  -webkit-text-stroke-width: 1.5px;
+		  -webkit-text-stroke-color: black;
+		}
+
+		.container .btn:hover {
+		  background-color: #CFFF04;
+		  font-family: 'Coral Pixels', sans-serif;
+
+		}
+		.content {
+			margin-left: 100px;
 		}
 	</style>
 </head>
 <body>
-	<h1>
-		Topography of Monsters
-	</h1>
-	<div>
-		<img src="topography.png"/>
-		<div id="description">
-			<p>
-				<i>Stories about the end of the world, and how to keep living in it anyway. With an inside portion by <a href="https://secondfloorhardwareschool.com/kuli-main">Kulimushi Barongozi.</a></i>
-				<br><br>
-				"Something is going on in my head. It's harder to wake up. The days are a little harder to manage. There are the small suspicions about lingering things from last week or the week before. There is the looming fear about depression and all those factors which I try so carefully to avoid. Sometimes I feel like I can’t stop running even when rocks get in my shoes. Life keeps moving and moving and moving. I think I just want to take some of this pressure off me somehow. And my birthday is coming up which is always an exciting and difficult time, at the same time.
-				<br><br>
-				I have to remember that it is always a good idea to make art. So in moments when I don’t know what to do, I will make art."
-				<br><br>
-				40 pages.
-				<br><br>
-				$8 or $10 with shipping.<br><br>
-				Order by emailing jisusheen@gmail.com.<br><br>
-				Paypal: jisusheen@gmail.com
-			</p>
+	<div class="bigbox">
+		<div class = "container">
+		  <img class="buttonImage" src="watari.png" alt="Web">
+		  <button onclick="window.location.href='http://jisusheen.com/web';" class="btn">Web</button>
+		</div>
+		<div class = "container">
+			  <img class="buttonImage" src="guy.png" alt="Writing">
+			  <button onclick="window.location.href='http://jisusheen.com/writing';" class="btn">Writing</button>
+			</div>
+		<div class = "container">
+		  <img class="buttonImage" src="butterfly.png" alt="Art">
+		  <button onclick="window.location.href='http://jisusheen.com/art';" class="btn">Art</button>
+		</div>
+		<div class = "container">
+		  <img class="buttonImage" src="sticks.png" alt="Contact">
+		  <button onclick="window.location.href='http://jisusheen.com/contact';" class="btn">Contact</button>
+		</div>
+		<br>
+		<div class = "container">
+		  <img class="buttonImage" src="duck.png" alt="Home">
+		  <button onclick="window.location.href='http://jisusheen.com';" class="btn">Home</button>
+		</div>
+	</div>
+	<div class="content">
+		<h1>
+			Topography of Monsters
+		</h1>
+		<div class="items">
+			<img class="book" src="topography.png"/>
+			<div id="description" class="items">
+				<p>
+					<i>Stories about the end of the world, and how to keep living in it anyway. With an inside portion by <a href="https://secondfloorhardwareschool.com/kuli-main">Kulimushi Barongozi.</a></i>
+					<br><br>
+					"Something is going on in my head. It's harder to wake up. The days are a little harder to manage. There are the small suspicions about lingering things from last week or the week before. There is the looming fear about depression and all those factors which I try so carefully to avoid. Sometimes I feel like I can’t stop running even when rocks get in my shoes. Life keeps moving and moving and moving. I think I just want to take some of this pressure off me somehow. And my birthday is coming up which is always an exciting and difficult time, at the same time.
+					<br><br>
+					I have to remember that it is always a good idea to make art. So in moments when I don’t know what to do, I will make art."
+					<br><br>
+					40 pages.
+					<br><br>
+					$8 or $10 with shipping.<br><br>
+					Order by emailing jisusheen@gmail.com.<br><br>
+					Paypal: jisusheen@gmail.com
+				</p>
+			</div>
 		</div>
 	</div>
 </body>
